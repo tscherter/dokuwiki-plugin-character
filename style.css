@@ -1,0 +1,43 @@
+
+.plugin-character {
+    display: inline-block;
+    cursor: help;
+    text-align: left;
+}
+
+.plugin-character-tooltip {
+    display: none;
+    font-size: 90%;
+    z-index:999;
+}
+
+.plugin-character-tooltip, .plugin-character-tooltip:before {
+    background-color: #fffAF0;
+    position: absolute;
+    border: 1px solid rgb(165, 165, 165);
+    border-radius: .5ex;
+    box-shadow: 2px 2px 5px #888888;
+    margin-top: 4ex;
+    margin-left: 0ex;
+    padding: 5px;
+}
+
+.plugin-character:hover .plugin-character-tooltip,
+.plugin-character:hover .plugin-character-tooltip:before {
+    display: inline-block;
+}
+
+.plugin-character-tooltip:before {
+    content: "";
+    box-shadow: none;
+    display: inline-block;
+    border-radius: 0px;
+    width: 10px;
+    height: 10px;
+    margin-top: -11px;
+    margin-left: vw;
+    padding: 0;
+    border-bottom: none;
+    border-right: none;
+    transform: rotate(45deg);
+    }

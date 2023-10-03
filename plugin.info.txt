@@ -1,0 +1,7 @@
+base   character
+author Vincent Tscherter
+email  vincent@tscherter.net
+date   2023-10-03
+name   character plugin
+desc   Stylized character encodings with additional tooltip for more info.
+url    https://www.dokuwiki.org/plugin:character
