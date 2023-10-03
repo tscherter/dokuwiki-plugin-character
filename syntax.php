@@ -68,6 +68,7 @@ class syntax_plugin_character extends SyntaxPlugin {
             $data['codepoint'] = mb_ord($raw);
         } else {
             $data['type'] = 'error'; 
+            $data['msg'] = mb_strlen($raw);
             $data['codepoint'] = -1;
             foreach (self::ES as $key => $entry) {
                 if ($raw==$entry[0]) {
@@ -84,7 +85,9 @@ class syntax_plugin_character extends SyntaxPlugin {
         
         $codepoint = $data['codepoint'];
         if ($data['type']=='error' || $codepoint > 0x10FFFFF) {
-            $renderer->doc .= '<code style="color: red">⚠️ invalid input [' . htmlentities($data['raw']) .']</code>';
+            if (empty($data['msg'])) $data['msg'] = '-';
+            $renderer->doc .= '<code style="color: red">⚠️ invalid input ['
+                . htmlentities($data['raw']) .']: '.$data['msg'].'</code>';
             return true;
         }
          
@@ -100,6 +103,7 @@ class syntax_plugin_character extends SyntaxPlugin {
             $charname = ' '.self::ES[$codepoint][1];
         }
         $urlencoding = urlencode($char);
+        if ($urlencoding=='+') $urlencoding = '%20';
         
         $orange = ' style="color: goldenrod"';
         $dred =  ' style="color: darkred"';
