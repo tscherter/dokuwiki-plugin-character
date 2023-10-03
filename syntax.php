@@ -143,7 +143,7 @@ class syntax_plugin_character extends SyntaxPlugin {
             .$tip.'</span>'
             .'<strong>character</strong><span style="grid-column: 2 / span 2;"><code style="padding: 0 0.5ex;margin-right: 0.5ex;color:green;">'
             .htmlentities($char)."</code> $charname</span>"
-            ."<strong>codepoint</strong><code style='text-align: center; color: blue'>$codepoint</code><span>DEC</span>";
+            ."<strong>code point</strong><code style='text-align: center; color: blue'>$codepoint</code><span>DEC</span>";
         if ($type != 'escape_sequence'   && !empty(self::ES[$codepoint]))
             $renderer->doc .= '<strong>escape sequence</strong><code style="text-align: center; color: green">'
                 .self::ES[$codepoint][0].'</code><span></span>';
