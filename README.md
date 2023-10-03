@@ -1,7 +1,7 @@
 # Character plugin for DokuWiki
 
 <p style="padding: 1ex; float: right; width: 200px">
-  <img src="https://github.com/tscherter/docuwiki-plugin-character/blob/main/image.png?raw=true" alt="Tooltip in action">
+  <img src="https://github.com/tscherter/dokuwiki-plugin-character/blob/main/image.png?raw=true" alt="Tooltip in action">
 </p>
 
 Stylized character encodings with additional tooltip for more info.
